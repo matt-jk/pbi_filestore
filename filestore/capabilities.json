@@ -1,0 +1,26 @@
+{
+    "objects": {},
+    "dataRoles": [
+        {
+            "displayName": "File Name",
+            "name": "file_name",
+            "kind": "GroupingOrMeasure"
+        },
+        {
+            "displayName": "File Content",
+            "name": "file_content",
+            "kind": "GroupingOrMeasure"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select":[{"for": {"in": "file_name"}},{"for": {"in": "file_content"}}]
+                    ,"dataReductionAlgorithm":{"top":{"count":3000}}
+                }
+            }
+        }
+
+    ]
+}
